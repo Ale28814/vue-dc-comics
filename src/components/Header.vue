@@ -40,6 +40,8 @@ export default {
         flex-direction: row;
         justify-content: space-around;
         vertical-align: middle;
+        align-items: center;
+        height: 90px;
         img{
             vertical-align: middle;
             max-width: 60px;
