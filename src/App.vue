@@ -1,5 +1,11 @@
 <template>
   <div id="app">
+    <!--header-->
+
+    <!--main-->
+
+    <!--footer-->
+    
   </div>
 </template>
 
