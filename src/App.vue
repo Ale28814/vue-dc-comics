@@ -1,13 +1,19 @@
 <template>
   <div id="app">
     <!--header-->
-  <Header />
+    <Header />
 
-  <Title />
+    <Title />
     <!--main-->
-  <Main />
-    <!--footer-->
+    <Bonuss />
 
+    <Mained />
+
+    <Newsec />
+
+    <Main />
+    <!--footer-->
+    <Footer />
   </div>
 </template>
 
@@ -15,6 +21,10 @@
 import Header from '@/components/Header.vue'
 import Title from '@/components/Title.vue'
 import Main from '@/components/Main.vue'
+import Footer from '@/components/Footer.vue'
+import Bonuss from '@/components/Bonuss.vue'
+import Newsec from '@/components/Newsec.vue'
+import Mained from '@/components/Mained.vue'
 
 export default {
   name: 'App',
@@ -22,15 +32,14 @@ export default {
     Header,
     Title,
     Main,
+    Footer,
+    Bonuss,
+    Newsec,
+    Mained,
   }
 }
 </script>
 
 <style scoped lang="scss">
-  * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
+@import '@/Styles/preset';
 </style>

@@ -7,16 +7,9 @@
     
         <nav>
             <ul>
-                <li><a  href="">characters</a></li>
-                <li><a class="active" href="">comics</a></li>
-                <li><a  href="">movie</a></li>
-                <li><a  href="">tv</a></li>
-                <li><a  href="">games</a></li>
-                <li><a  href="">collectible</a></li>
-                <li><a  href="">video</a></li>
-                <li><a  href="">fans</a></li>
-                <li><a  href="">news</a></li>
-                <li><a  href="">shop</a></li>
+                <li v-for="(link, index) in Navi" :key="`Navi-${index}`">
+                    <a href="`${link.url}`">{{link.text}}</a>
+                </li>
             </ul>
         </nav>
     </div>
@@ -28,13 +21,69 @@
 <script>
 export default {
     name: 'Header',
+    data(){
+        return {
+            Navi: [
+                {
+                    text: 'Characters',
+                    url: '/Characters',
+                    current: true,
+                },
+                {
+                    text: 'Comics',
+                    url: '/Comics',
+                    current: false,
+                },
+                {
+                    text: 'Movies',
+                    url: '/Movies',
+                    current: false,
+                },
+                {
+                    text: 'Characters',
+                    url: '/Characters',
+                    current: false,
+                },
+                {
+                    text: 'Tv',
+                    url: '/Tv',
+                    current: false,
+                },
+                {
+                    text: 'games',
+                    url: '/games',
+                    current: false,
+                },
+                {
+                    text: 'Collectibles',
+                    url: '/Collectibles',
+                    current: false,
+                },
+                {
+                    text: 'videos',
+                    url: '/videos',
+                    current: false,
+                },
+                {
+                    text: 'fans',
+                    url: '/fans',
+                    current: false,
+                },
+                {
+                    text: 'shop',
+                    url: '/shop',
+                    current: false,
+                },
+            ]
+        }
+    }
 }
 
 
 </script>
 
 <style scoped lang="scss">
-
+@import '@/Styles/preset';
     .container{
         display: flex;
         flex-direction: row;
