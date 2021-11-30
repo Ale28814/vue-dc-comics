@@ -1,119 +1,127 @@
 <template>
-  <header>
-    <div class="container">
-        <a href="">
-            <img src="../assets/dc-logo.png" alt="logodc">
-        </a>
-    
-        <nav>
-            <ul>
-                <li v-for="(link, index) in Navi" :key="`Navi-${index}`">
-                    <a href="`${link.url}`">{{link.text}}</a>
+  <section>
+      <div class="container d-flex s-between">
+            <a class="header-logo" href="/">
+                <img   src="@/assets/dc-logo.png" alt="DC logo">
+            </a>
+            <ul class="d-flex i-center">
+                <li class="d-flex i-center" v-for="(element, index) in headerLink" :key="`link-${index}`">
+                    <a :class="{ active: element.current}" :href="element.url">{{ element.text }}</a>
                 </li>
             </ul>
-        </nav>
-    </div>
-        
-   
-  </header>
+      </div>
+  </section>
 </template>
 
 <script>
 export default {
     name: 'Header',
-    data(){
+    data() {
         return {
-            Navi: [
+            headerLink: [
                 {
                     text: 'Characters',
-                    url: '/Characters',
-                    current: true,
+                    url: '/',
+                    current: false,
                 },
                 {
                     text: 'Comics',
-                    url: '/Comics',
+                    url: '/',
                     current: false,
                 },
                 {
                     text: 'Movies',
-                    url: '/Movies',
-                    current: false,
-                },
-                {
-                    text: 'Characters',
-                    url: '/Characters',
+                    url: '/',
                     current: false,
                 },
                 {
                     text: 'Tv',
-                    url: '/Tv',
+                    url: '/',
                     current: false,
                 },
                 {
-                    text: 'games',
-                    url: '/games',
+                    text: 'Games',
+                    url: '/',
                     current: false,
                 },
                 {
-                    text: 'Collectibles',
-                    url: '/Collectibles',
+                    text: 'Videos',
+                    url: '/',
                     current: false,
                 },
                 {
-                    text: 'videos',
-                    url: '/videos',
+                    text: 'Fans',
+                    url: '/',
                     current: false,
                 },
                 {
-                    text: 'fans',
-                    url: '/fans',
+                    text: 'News',
+                    url: '/',
                     current: false,
                 },
                 {
-                    text: 'shop',
-                    url: '/shop',
+                    text: 'Characters',
+                    url: '/',
+                    current: false,
+                },
+                {
+                    text: 'Shop',
+                    url: '/',
                     current: false,
                 },
             ]
         }
     }
 }
-
-
 </script>
 
-<style scoped lang="scss">
-@import '@/Styles/preset';
-    .container{
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        vertical-align: middle;
-        align-items: center;
-        height: 90px;
-        img{
-            vertical-align: middle;
-            max-width: 60px;
+<style scoped lang='scss'>
+    
+    section {
+        height: 10vh;
+    }
+    .container > a {
+        height: 100%;
+    }
+        .header-logo {
+        height: 100%;
+        padding: 0.7rem 0;
+        transition: transform 1.75s;
+        &:hover {
+            transform: rotateY(360deg);
+            filter:contrast(120%);
+        }
+        img {
+            height: 100%;
         }
     }
-   ul {
-       display: flex;
-       list-style: none;
-       justify-content: center;
-
-       a {
-           display: inline-block;
-           padding: 4px;
-           margin-right: 4px;
-           text-decoration: none;
-           color: #000;
-           &.active {
-               border-bottom: 4px solid blue;
-           }
-           &:hover {
-               background-color: grey;
-           }
-
-       }
-   }
+    ul {
+        height: 100%;
+        justify-content: center;
+        list-style: none;
+        li {
+            height: 100%;
+            margin: 0 0.6rem;
+            border-bottom: 3px solid #0b5ba500;
+            transition: all 0.3s;
+            &:hover {
+                border-bottom: 3px solid #0b5ba5;
+                background-color: #f5f5f5;
+            }
+            a {
+                display: inline-block;
+                text-decoration: none;
+                color: #000;
+                text-transform: uppercase;
+                font-size: 14px;
+                font-weight: 600;
+                transition: transform 0.2s;
+            }
+        }
+        li a.active,
+        li:hover a {
+            color: #0b5ba5;
+            transform: scale(1.05);
+        }
+    }
 </style>

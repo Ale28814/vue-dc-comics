@@ -1,0 +1,39 @@
+.d-flex {
+    display: flex;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.s-between {
+    justify-content: space-between;
+}
+
+.s-around {
+    justify-content: space-around;
+}
+
+.i-center {
+    align-items: center;
+}
+
+.c-center {
+    justify-content: center;
+}
+
+.self-center {
+    align-self: center;
+}
+
+
+/* SPACING */
+
+.py-1_5 {
+    padding: 1.5rem 0;
+}
+
+.py-1 {
+    padding: 1rem 0;
+}

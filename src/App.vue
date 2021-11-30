@@ -1,45 +1,45 @@
 <template>
   <div id="app">
-    <!--header-->
+
     <Header />
 
-    <Title />
-    <!--main-->
-    <Bonuss />
+    <main>
+      <Hero />
+      
+      <MainContent />
 
-    <Mained />
+      <MainShopArea />
+    </main>
 
-    <Newsec />
+    <footer>
+      <FooterLink />
 
-    <Main />
-    <!--footer-->
-    <Footer />
+      <FooterSocials />
+    </footer>
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
-import Title from '@/components/Title.vue'
-import Main from '@/components/Main.vue'
-import Footer from '@/components/Footer.vue'
-import Bonuss from '@/components/Bonuss.vue'
-import Newsec from '@/components/Newsec.vue'
-import Mained from '@/components/Mained.vue'
-
+import MainContent from '@/components/MainContent.vue'
+import FooterLink from '@/components/FooterLink.vue'
+import FooterSocials from '@/components/FooterSocials.vue'
+import MainShopArea from '@/components/MainShopArea.vue'
+import Hero from '@/components/Hero.vue'
 export default {
   name: 'App',
   components: {
     Header,
-    Title,
-    Main,
-    Footer,
-    Bonuss,
-    Newsec,
-    Mained,
+    MainContent,
+    FooterLink,
+    FooterSocials,
+    MainShopArea,
+    Hero,
   }
 }
 </script>
 
-<style scoped lang="scss">
-@import '@/Styles/preset';
+<style lang="scss">
+@import '@/styles/general';
+@import '@/Styles/utilities';
 </style>
